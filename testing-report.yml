@@ -1,56 +1,56 @@
 ---
 - summary: |
     Проверка возможности поиска товара по ключевому слову
-status: pass
+  status: pass
 
 - summary: |
     Проверка возможности поиска товара по категориям
-status: pass
+  status: pass
 
 - summary: |
     Проверка возможности поиска несуществующего товара по ключевому слову
-status: pass
+  status: pass
 
 - summary: |
     Проверка возможности поиска товара по фильтру
-status: pass
+  status: pass
 
 - summary: |
     Проверка возможности просмотра информации о товаре
-status: pass
+  status: pass
 
 - summary: |
     Проверка возможности добавления товара в корзину
-status: pass
+  status: pass
 
 - summary: |
     Проверка возможности поиска товара по указанному диапазону цены
-status: pass
+  status: pass
 
 - summary: |
     Проверка возможности поиска товара по нескольким фильтрам
-status: pass
+  status: pass
 
 - summary: |
     Проверка возможности оформления заказа
-status: pass
+  status: pass
 
 - summary: |
     Проверка возможности очистки корзины
-status: pass
+  status: pass
 
 - summary: |
     Проверка кроссбраузерности сайта
-status: pass
+  status: pass
 
 - summary: |
     Проверка цены товара в русской версии сайта
-status: fail
+  status: fail
 
 - summary: |
     Проверка автоматической очистки корзины после оформления заказа
-status: fail
+  status: fail
 
 - summary: |
     Проверка формы "цена" на отрицательные числа
-status: fail
+  status: fail
