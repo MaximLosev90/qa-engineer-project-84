@@ -1,111 +1,113 @@
 ---
-- summary: |
+test-cases:
+  - summary: |
     Проверка возможности поиска товара по ключевому слову
-status: pass
+    status: pass
 
-- summary: |
+  - summary: |
     Проверка возможности поиска товара по категориям
-status: pass
+    status: pass
 
-- summary: |
+  - summary: |
     Проверка возможности поиска несуществующего товара по ключевому слову
-status: fail
+    status: fail
 
-- summary: |
+  - summary: |
     Проверка возможности поиска товара по фильтру
-status: pass
+    status: pass
 
-- summary: |
+  - summary: |
     Проверка возможности просмотра информации о товаре
-status: pass
+    status: pass
 
-- summary: |
+  - summary: |
     Проверка возможности добавления товара в корзину
-status: pass
+    status: pass
 
-- summary: |
+  - summary: |
     Проверка возможности поиска товара по указанному диапазону цены
-status: pass
+    status: pass
 
-- summary: |
+  - summary: |
     Проверка возможности поиска товара по нескольким фильтрам
-status: pass
+    status: pass
 
-- summary: |
+  - summary: |
     Проверка возможности оформления заказа
-status: pass
+    status: pass
 
-- summary: |
+  - summary: |
     Проверка возможности очистки корзины
-status: pass
+    status: pass
 
-- summary: |
+  - summary: |
     Проверка кроссбраузерности сайта
-status: pass
+    status: pass
 
-- summary: |
+  - summary: |
     Проверка цены товара в русской версии сайта
-status: fail
+    status: fail
 
-- summary: |
+  - summary: |
     Проверка автоматической очистки корзины после оформления заказа
-status: fail
+    status: fail
 
-- summary: |
+  - summary: |
     Проверка формы "цена" на отрицательные числа
-status: fail
-  
-- summary: |
+    status: fail
+
+bugreports:
+  - summary: |
     В форму "цена" можно вводить отрицательные числа
-environment: |
+    environment: |
     Google Chrome   107.0.5304.121 (Официальная сборка) (64 бит)
     ОС Linux 22.04
-steps-to-reproduce: |
+    steps-to-reproduce: |
     1. Зайти на главную страницу магазина
     2. В форме "цена" в поле "от" указать отрицательное значение
     3. В форме "цена" в поле "до" указать отрицательное значение
-expected-result: |
+    expected-result: |
     Поля "от" и "до" не принимают отрицательные значения, не возможности их ввести, либо выдаётся соответствующее предупреждение
-actual-result: |
+    actual-result: |
     Поля "от" и "до" принимают отрицательные значения
 
-- summary: |
+  - summary: |
     Корзина не очищается после оформления заказа
-environment: |
+    environment: |
     Google Chrome   107.0.5304.121 (Официальная сборка) (64 бит)
     ОС Linux 22.04
-steps-to-reproduce: |
+    steps-to-reproduce: |
     1. Открыта корзина с добавленными в неё товарами
     2. Нажимаем "Оформить заказ"
     3. Нажимаем "Закрыть"
-expected-result: |
+    expected-result: |
     Корзина автоматически очищается после оформления заказа
-actual-result: |
+    actual-result: |
     После оформления заказа ничего не происходит, товары остаются в корзине
 
-- summary: |
+  - summary: |
     Цена товара в русской версии сайта указана в долларах (а не в рублях)
-environment: |
+    environment: |
     Google Chrome   107.0.5304.121 (Официальная сборка) (64 бит)
     ОС Linux 22.04
-steps-to-reproduce: |
+    steps-to-reproduce: |
     1. Зайти на главную страницу магазина
     2. Переключиться на русскую версию сайта в правом верхнем углу экрана
     3. Зайти на страницу любого товара
-expected-result: |
+    expected-result: |
     Цена указана в рублях
-actual-result: |
+    actual-result: |
     Цена указана в долларах
 
-- summary: |
+  - summary: |
     При поиске несуществующего товара по ключевому слову не выдаётся сообщение о том, что товар не найден
-environment: |
+    environment: |
     Google Chrome   107.0.5304.121 (Официальная сборка) (64 бит)
     ОС Linux 22.04
-steps-to-reproduce: |
+    steps-to-reproduce: |
     1. Зайти на главную страницу магазина
     2. Ввести в поле "Поиск" название несуществующего товара
-expected-result: |
+    expected-result: |
     Выводится сообщение "товар не найден"
-actual-result: |
+    actual-result: |
     Сообщение "товар не найден" не появляется, выводятся другие товары, не соответствующие запросу
